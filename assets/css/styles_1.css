@@ -1,0 +1,184 @@
+
+/*=============== HEADER & NAV ===============*/
+.header{
+    position: fixed;
+    width: 100%;
+    top:1%;
+    left:0;    
+    z-index: var(--z-fixed);
+    transition: box-shadow .4s transform 0.4s;
+}
+.nav{
+    top:12%;
+    position:relative;
+    height: var(--header--height);
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.nav__logo{
+    display:flex;
+    margin-top:30px;
+    margin-left:20px;
+    align-items:center;
+    font-family: var(--second-font);
+    color: var(--tittle-color);
+    
+}
+.nav__logo img{    
+    width:30px; 
+}
+.nav__logo div{
+    background-color: hsl(45, 99%, 55%);
+    padding:6px;
+    border-radius: .5rem;
+}
+.nav__text{
+    margin-left:.5rem;
+}
+
+.nav__toggle{
+    display flex;    
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1150px){
+    .nav__menu{
+        position:fixed;
+        top:2%;
+        right:-100%;
+        background-color:var(--body-color);
+        width:70%;
+        height:95%;
+        padding:4.5rem 2rem 3.5rem;;
+        box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
+        transition: right .4s;
+    }
+    .nav__logo{
+        display:flex;
+        margin-top:25px;
+        margin-left:10px;
+        align-items:center;
+        font-family: var(--second-font);
+        color: var(--tittle-color);
+        
+    }
+}
+@media screen and (min-width: 1150px){
+    .nav__menu{
+        position:fixed;
+        top:2%;
+        right:-100%;
+        background-color:var(--body-color);
+        width:40%;
+        height:95%;
+        padding:4.5rem 2rem 3.5rem;;
+        box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
+        transition: right .4s;
+    }
+}
+
+.nav__list{
+    text-align:center;
+    display:flex;
+    flex-direction:column   ;
+    row-gap: 2rem;
+}
+
+.nav__link{
+    position:relative;
+    color: var(--title-color);
+    font-family: var(--second-font); 
+}
+
+.nav__link::after{
+    content:'';    
+    width: 0;
+    height: 3px;
+    background-color: #333;
+    position:absolute;
+    left: 0;
+    bottom:-.5rem;
+    transition: width .3s ease-in-out;
+}
+.nav__link:hover::after{
+    width:100%;
+}
+
+.nav__toggle {
+    position: fixed;  /* Fija el botón para que no se mueva al hacer scroll */
+    right: 0;         /* Coloca el botón en el extremo derecho */
+    top: 50%;         /* Centra verticalmente el botón */
+    transform: translateY(-50%);  /* Asegura que el botón esté perfectamente centrado */
+    cursor: pointer;
+    z-index: 999;     /* Asegura que el botón esté por encima de otros elementos */
+    background-color: hsl(45, 99%, 55%);
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--title-color);
+    transition: transform 0.4s ease; /* Añade una transición suave para la rotación */
+
+}
+.nav__toggle .toggle-icon {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.nav__toggle.active .toggle-icon {
+    transform: rotate(135deg);
+}
+
+.nav__toggle i {
+    font-size: 1.5rem;
+}
+
+/* Show menu */
+.show-menu{
+    right:0;
+}
+
+/* Add shadow header */
+
+
+/* Active link */
+
+
+/*=============== HOME ===============*/
+
+
+/*=============== BUTTON ===============*/
+
+
+/*=============== RECIPE ===============*/
+
+
+/*=============== POPULAR ===============*/
+
+
+/*=============== DELIVERY ===============*/
+
+
+/*=============== CONTACT ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up */
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
