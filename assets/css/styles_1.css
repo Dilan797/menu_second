@@ -44,6 +44,7 @@
 
 /* Navigation for mobile devices */
 @media screen and (max-width: 1150px){
+    
     .nav__menu{
         position:fixed;
         top:2%;
@@ -53,7 +54,7 @@
         height:95%;
         padding:4.5rem 2rem 3.5rem;;
         box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
-        transition: right .4s;
+        transition: right 1s ease-in-out;
     }
     .nav__logo{
         display:flex;
@@ -63,6 +64,10 @@
         font-family: var(--second-font);
         color: var(--tittle-color);
         
+    }
+    .nav__toggle.menu-open {
+        right: 71%; /* Se mueve al borde izquierdo del menú en móviles */
+        transition: right 0.635s ease-in-out;
     }
 }
 @media screen and (min-width: 1150px){
@@ -75,7 +80,11 @@
         height:95%;
         padding:4.5rem 2rem 3.5rem;;
         box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
-        transition: right .4s;
+        transition: right 1.5s ease-in-out;
+    }
+    .nav__toggle.menu-open {
+        right: 40%; /* Se mueve al borde izquierdo del menú en pantallas grandes */
+        transition: right .66s ease-in-out ;
     }
 }
 
@@ -117,7 +126,7 @@
     padding: 10px;
     border-radius: 50%;
     color: var(--title-color);
-    transition: transform 0.4s ease; /* Añade una transición suave para la rotación */
+    transition: transform 0.7s ease; /* Añade una transición suave para la rotación */
 
 }
 .nav__toggle .toggle-icon {
@@ -126,18 +135,39 @@
 }
 
 .nav__toggle.active .toggle-icon {
-    transform: rotate(135deg);
+    transform: rotate(315deg);
 }
 
 .nav__toggle i {
     font-size: 1.5rem;
 }
-
+.nav__menu, .nav__toggle, .show-menu {
+    transition-property: right, transform;
+    transition-duration: .6s, .8s;
+    transition-timing-function: ease-in-out, ease;
+}
+.nav__menu {
+    transition: right .6s ease-in-out;
+}
 /* Show menu */
 .show-menu{
     right:0;
 }
+/* FONDO OPCAO CUADO ABRE NA_MENÚ */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con 50% de opacidad */
+    z-index: 90; /* Menor que el z-index del menú y el botón */
+    display: none; /* Oculto por defecto */
+}
 
+.overlay.active {
+    display: block;
+}
 /* Add shadow header */
 
 
