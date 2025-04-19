@@ -17,15 +17,11 @@
     align-items: center;
 }
 
-/* .nav__logo{
-    display:flex;
-    margin-top:30px;
-    margin-left:20px;
-    align-items:center;
-    font-family: var(--second-font);
-    color: var(--tittle-color);
-    
-} */
+/* Oculta el logo por defecto */
+.logo-mobile {
+    display: none;
+}
+
 
 
 .nav__text{
@@ -38,6 +34,11 @@
 
 /* Navigation for mobile devices */
 @media screen and (max-width: 1150px){
+    .container {
+        max-width:80vh;
+        margin-inline: 1.5rem;
+        height: 9vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    }
     .main {
         background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
         width: 80%; /* Ajusta este valor para cambiar el ancho del contenido */
@@ -59,19 +60,21 @@
     }
     .nav__logo{
         display:flex;
-        margin-top:25px;
-        margin-left:10px;
+        margin-top:2px;
         align-items:center;
-        font-family: var(--second-font);
-        color: var(--tittle-color);
-        
+                
     }
+    
     .nav__toggle.menu-open {
         right: 71%; /* Se mueve al borde izquierdo del menú en móviles */
         transition: right 0.635s ease-in-out;
     }
+    .nav__toggle {
+        margin-top: -2%; /* Ajusta el tamaño del botón toggle */
+    }
 }
 @media screen and (min-width: 1150px){
+    
     .nav__menu{
         position:fixed;
         top:2%;
@@ -91,12 +94,20 @@
 /* Navigation for mobile devices
 Logo and restaurant's name */
 @media screen and (max-width: 620px) {
+    .logo-mobile {
+        display: block;
+        width: 20vh;
+        margin-top: 3vh;
+        margin-left: -6vh;
+    }
+    
     .container {
         max-width: 800px;
         margin-inline: 1.5rem;
+        height: 8vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
     }
     .nav__logo {
-        display: flex;
+        display: none;
         flex-direction: column; /* Coloca el logo y el texto en columnas (uno debajo del otro) */
         align-items: center; /* Centra horizontalmente */
         margin: 25px auto; /* Centra el logo en su contenedor */
@@ -110,6 +121,9 @@ Logo and restaurant's name */
     .nav__text {
         font-size: 1.5rem; /* Aumentar el tamaño del texto en pantallas pequeñas */
         margin-top: 5px; /* Espacio superior para separar el texto del logo */
+    }
+    .nav__toggle {
+        top: 11%; /* Ajusta el tamaño del botón toggle */
     }
 }
 .nav__list{
@@ -142,7 +156,7 @@ Logo and restaurant's name */
 .nav__toggle {
     position: fixed;  /* Fija el botón para que no se mueva al hacer scroll */
     right: 0;         /* Coloca el botón en el extremo derecho */
-    top: 50%;         /* Centra verticalmente el botón */
+    margin-top: 4%;         /* Centra verticalmente el botón */
     transform: translateY(-50%);  /* Asegura que el botón esté perfectamente centrado */
     cursor: pointer;
     z-index: 999;     /* Asegura que el botón esté por encima de otros elementos */
