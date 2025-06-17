@@ -123,8 +123,9 @@ img {
 .main {
   background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
   width: 92%; /* Ajusta este valor para cambiar el ancho del contenido */
-  max-width: 1200px; /* Máximo ancho del contenido */
+  max-width: 800px; /* Máximo ancho del contenido */
   margin: 2rem auto;
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 85vh; /* Asegura que el contenido no se superponga con la barra de navegación */
 } 

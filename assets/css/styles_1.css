@@ -1,4 +1,9 @@
-
+/* ========== 1. ENVOLTORIO GLOBAL ========== */
+.wrapper {
+  width: min(90%, 1200px);   /* 90 % del viewport pero nunca >1200 px */
+  margin-inline: auto;       /* centra horizontalmente */
+  padding-inline: 1.5rem;    /* el mismo “gutter” en todo el sitio */
+}
 /*=============== HEADER & NAV ===============*/
 .header{
     position: fixed;
@@ -45,7 +50,9 @@
         max-width: 1200px; /* Máximo ancho del contenido */
         margin: 2rem auto;
         padding: 2rem;
+        margin-left:19vh;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 10vh; /* Asegura que el contenido no se superponga con la barra de navegación */
     } 
     .nav__menu{
         position:fixed;
@@ -69,9 +76,7 @@
         right: 71%; /* Se mueve al borde izquierdo del menú en móviles */
         transition: right 0.635s ease-in-out;
     }
-    .nav__toggle {
-        margin-top: -2%; /* Ajusta el tamaño del botón toggle */
-    }
+    
 }
 @media screen and (min-width: 1150px){
     
@@ -156,7 +161,7 @@ Logo and restaurant's name */
 .nav__toggle {
     position: fixed;  /* Fija el botón para que no se mueva al hacer scroll */
     right: 0;         /* Coloca el botón en el extremo derecho */
-    margin-top: 4%;         /* Centra verticalmente el botón */
+    top:77%;
     transform: translateY(-50%);  /* Asegura que el botón esté perfectamente centrado */
     cursor: pointer;
     z-index: 999;     /* Asegura que el botón esté por encima de otros elementos */
