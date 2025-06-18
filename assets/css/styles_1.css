@@ -54,17 +54,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         margin-top: 10vh; /* Asegura que el contenido no se superponga con la barra de navegación */
     } 
-    .nav__menu{
-        position:fixed;
-        top:2%;
-        right:-100%;
-        background-color:var(--body-color);
-        width:70%;
-        height:95%;
-        padding:4.5rem 2rem 3.5rem;;
-        box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
-        transition: right 1s ease-in-out;
-    }
+    /* Responsive menu moved to Tailwind classes */
     .nav__logo{
         display:flex;
         margin-top:2px;
@@ -80,17 +70,7 @@
 }
 @media screen and (min-width: 1150px){
     
-    .nav__menu{
-        position:fixed;
-        top:2%;
-        right:-100%;
-        background-color:var(--body-color);
-        width:40%;
-        height:95%;
-        padding:4.5rem 2rem 3.5rem;;
-        box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
-        transition: right 1.5s ease-in-out;
-    }
+    /* Responsive menu moved to Tailwind classes */
     .nav__toggle.menu-open {
         right: 40%; /* Se mueve al borde izquierdo del menú en pantallas grandes */
         transition: right .66s ease-in-out ;
@@ -128,14 +108,13 @@ Logo and restaurant's name */
         margin-top: 5px; /* Espacio superior para separar el texto del logo */
     }
     .nav__toggle {
-        top: 11%; /* Ajusta el tamaño del botón toggle */
+        /* Position handled by Tailwind */
     }
 }
 .nav__list{
     text-align:center;
     display:flex;
-    flex-direction:column   ;
-    row-gap: 2rem;
+    /* Layout handled by Tailwind */
 }
 
 .nav__link{

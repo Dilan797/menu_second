@@ -13,6 +13,8 @@
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
       <link rel="stylesheet" href="assets/css/styles_1.css">
+      <!-- Tailwind CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
 
       <title>MENÚ</title>
    </head>
@@ -21,12 +23,12 @@
    <body>      
       <div class="content-wrapper">
          <header class="header" id="header">
-            <nav class="nav container wrapper">            
+            <nav class="nav container wrapper flex items-center justify-between">
                <!--Opciones del nav_menú -->
                <a href="#" class="nav__logo">VIVA LA VIDA</a>
                <img src="/assets/img/logo.png" alt="Logo" class="logo-mobile">
-               <div class="nav__menu" id="nav-menu">
-                  <ul class="nav__list">
+               <div class="nav__menu fixed top-2 right-[-100%] bg-[var(--body-color)] w-[70%] h-[95%] p-8 shadow-lg transition-all duration-700 md:static md:flex md:h-auto md:w-auto md:p-0 md:shadow-none" id="nav-menu">
+                  <ul class="nav__list flex flex-col gap-6 md:flex-row md:gap-6">
                      <li>
                         <a href="#home" class="nav__link">Inicio</a>
                      </li>
@@ -48,13 +50,10 @@
          </header>
          <div class="container_1">
             <!-- Toggle Buttom -->
-            <div class="nav__toggle" id="nav-toggle">
+            <div class="nav__toggle md:hidden" id="nav-toggle">
                <span class="toggle-icon"><i class="ri-apps-2-fill"></i></span>
             </div>
-            <a href="#" class="nav__logo">
-               
-               
-            </a>
+            
             <!--==================== MAIN ====================-->
             <main class="main">
                <!--==================== HOME ====================-->
@@ -87,7 +86,7 @@
       
          </footer>
       </div>
-         <div class="overlay"></div>
+         <div class="overlay md:hidden"></div>
       </div>
 
       <!--========== SCROLL UP ==========-->
