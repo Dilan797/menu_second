@@ -8,8 +8,16 @@
         navToggle.addEventListener('click', () =>{
             navMenu.classList.toggle('show-menu');
             navToggle.classList.toggle('active');
-            navToggle.classList.toggle('menu-open');
             overlay.classList.toggle('active');
+            if(navMenu.classList.contains('show-menu')){
+                if(window.innerWidth <= 1150){
+                    navToggle.style.right = '71%';
+                }else{
+                    navToggle.style.right = '40%';
+                }
+            }else{
+                navToggle.style.right = '';
+            }
         })
     }
 
@@ -23,8 +31,8 @@
         
         // When we click on each nav__link, we remove the show-menu class
         navMenu.classList.remove('show-menu');
-        navToggle.classList.remove('active'); // Add this line
-        navToggle.classList.remove('menu-open');
+        navToggle.classList.remove('active');
+        navToggle.style.right = '';
         overlay.classList.remove('active');
     }
     navLink.forEach(n => n.addEventListener('click', linkAction))
