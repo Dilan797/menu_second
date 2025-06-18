@@ -13,6 +13,7 @@
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
       <link rel="stylesheet" href="assets/css/styles_1.css">
+      <script src="https://cdn.tailwindcss.com"></script>
 
       <title>MENÚ</title>
    </head>
@@ -21,11 +22,11 @@
    <body>      
       <div class="content-wrapper">
          <header class="header" id="header">
-            <nav class="nav container wrapper">            
+            <nav class="nav container wrapper flex justify-between items-center bg-[rgba(255,248,225,0.95)] py-4 px-8 rounded-2xl m-4 shadow-[0_2px_10px_rgba(0,0,0,0.1)] max-[1150px]:max-w-[80vh] max-[1150px]:h-[9vh]">
                <!--Opciones del nav_menú -->
-               <a href="#" class="nav__logo">VIVA LA VIDA</a>
-               <img src="/assets/img/logo.png" alt="Logo" class="logo-mobile">
-               <div class="nav__menu" id="nav-menu">
+               <a href="#" class="nav__logo max-[620px]:hidden">VIVA LA VIDA</a>
+               <img src="/assets/img/logo.png" alt="Logo" class="logo-mobile hidden max-[620px]:block w-[20vh] mt-[3vh] ml-[-6vh]">
+               <div class="nav__menu fixed top-[2%] right-[-100%] bg-[var(--body-color)] w-[70%] h-[95%] p-[4.5rem_2rem_3.5rem] shadow-[0_4px_16px_hsla(22,100%,8%,.2)] transition-all duration-1000 md:w-[40%] md:duration-[1500ms]" id="nav-menu">
                   <ul class="nav__list">
                      <li>
                         <a href="#home" class="nav__link">Inicio</a>
@@ -48,7 +49,7 @@
          </header>
          <div class="container_1">
             <!-- Toggle Buttom -->
-            <div class="nav__toggle" id="nav-toggle">
+            <div class="nav__toggle fixed right-0 top-[77%] -translate-y-1/2 cursor-pointer z-[999] bg-[hsl(45,99%,55%)] p-[10px] rounded-full text-[var(--title-color)] transition-transform max-[620px]:top-[11%]" id="nav-toggle">
                <span class="toggle-icon"><i class="ri-apps-2-fill"></i></span>
             </div>
             <a href="#" class="nav__logo">
@@ -56,7 +57,7 @@
                
             </a>
             <!--==================== MAIN ====================-->
-            <main class="main">
+            <main class="main bg-[rgba(255,255,255,0.8)] w-[92%] max-w-[800px] mx-auto my-8 p-8 shadow-md ml-[85vh] max-[1150px]:w-[80%] max-[1150px]:max-w-[1200px] max-[1150px]:ml-[19vh] max-[1150px]:mt-[10vh]">
                <!--==================== HOME ====================-->
                <section class="home section" id="home">
                   
